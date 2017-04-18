@@ -1,0 +1,4 @@
+use_frameworks!
+target 'InAppTestInviteShare' do
+  pod 'AppsFlyerFWTestBuild', '4.8.549'
+end
