@@ -46,14 +46,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String AF_REFERRAL_NAME = "af_referral_name";
     private static final String AF_REFERRAL_AVATAR_URL = "af_referral_avatar_url";
 
-    private static final String ONE_LINK_ID = "2310578617";
+    private static final String APPSFLYER_DEV_KEY = "<Enter-Your-AF-Dev-Key>";
+    private static final String ONE_LINK_ID = "<Enter-Application's-One-Link-ID>";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AppsFlyerLib.getInstance().setAppInviteOneLink(ONE_LINK_ID);
-        AppsFlyerLib.getInstance().startTracking(this.getApplication(), "udqj9oVC22BQdWPoQQWMsN");
+        AppsFlyerLib.getInstance().startTracking(this.getApplication(), APPSFLYER_DEV_KEY);
         registerConversionListener();
 
         findViewById(R.id.gmail_invite).setOnClickListener(this);
@@ -121,21 +122,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             conversionData.get(attrName));
                 }
 
-//                conversionData.put(AF_REFERRAL_NAME, "Shachar Aharon");
-//                conversionData.put(AF_REFERRAL_AVATAR_URL, "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y");
-//                conversionData.put(AF_REFERRAL_AVATAR_URL, "https://fb-s-a-a.akamaihd.net/h-ak-xtf1/v/t1.0-9/10254039_158292347891770_5463903483238234152_n.jpg?oh=f331313c8fde39c39043b43b7044ce58&oe=593EC841&__gda__=1500513177_47981dab03482f944a9818ec88158a56");
-
                 if (conversionData.containsKey(AF_REFERRAL_NAME) && conversionData.containsKey(AF_REFERRAL_AVATAR_URL)) {
                     runOnUiThread(new Runnable() {
                         public void run() {
                             String userName = conversionData.get(AF_REFERRAL_NAME);
                             String avatarUrl = conversionData.get(AF_REFERRAL_AVATAR_URL);
-//                            showReferralDialog(getApplicationContext(),userName,avatarUrl);
                             showReferralDialog(userName, avatarUrl);
-//                            Intent intent = new Intent(getApplicationContext(), AlertDialog.class);
-//                            intent.putExtra(AF_REFERRAL_NAME, userName);
-//                            intent.putExtra(AF_REFERRAL_AVATAR_URL, avatarUrl);
-//                            startActivity(intent);
                         }
                     });
                 }
@@ -209,9 +201,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void shareNativeApps() {
-        // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-        //         .setAction("Action", null).show();
+//     private void shareNativeApps() {
+//         Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                 .setAction("Action", null).show();
 
 
 //                String shareBody = "Please install this app: "+ ShareInviteHelper.createInviteLink(MainActivity.this).generateLink();
@@ -220,10 +212,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                sendIntent.setType("text/plain");
 //                sendIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Recommended app");
 //                sendIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-//
+
 //                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP_MR1) {
 //                    Log.d("INFORMATION", "The current android version allow us to know what app is chosen by the user.");
-//
+
 //                    Intent receiverIntent =
 //                            new Intent(MainActivity.this,ShareBroadcastReceiver.class);
 //                    PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, receiverIntent, PendingIntent.FLAG_CANCEL_CURRENT);
@@ -231,66 +223,66 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                }
 //                startActivity(sendIntent);SEND_MSG_REQUEST = 10;
 
-        //Create primary intent to be used for chooser intent
-        Intent smsIntent = new Intent();
-        smsIntent.setAction(Intent.ACTION_SEND);
-        smsIntent.setType("text/plain");
-        //need to limit the scope of this intent to SMS app only. If we don't set the
-        //package here, it will target apps like bluetooth, clipboard etc also.
-        smsIntent.setPackage("com.android.mms");
-        smsIntent.putExtra("sms_body", message);
+//         //Create primary intent to be used for chooser intent
+//         Intent smsIntent = new Intent();
+//         smsIntent.setAction(Intent.ACTION_SEND);
+//         smsIntent.setType("text/plain");
+//         //need to limit the scope of this intent to SMS app only. If we don't set the
+//         //package here, it will target apps like bluetooth, clipboard etc also.
+//         smsIntent.setPackage("com.android.mms");
+//         smsIntent.putExtra("sms_body", message);
 
-        //intent for adding other apps
-        Intent queryIntent = new Intent(Intent.ACTION_SEND);
-        queryIntent.setType("text/plain");
+//         //intent for adding other apps
+//         Intent queryIntent = new Intent(Intent.ACTION_SEND);
+//         queryIntent.setType("text/plain");
 
-        PackageManager pm = getPackageManager();
-        List<ResolveInfo> resolveInfos = pm.queryIntentActivities(queryIntent, 0);
+//         PackageManager pm = getPackageManager();
+//         List<ResolveInfo> resolveInfos = pm.queryIntentActivities(queryIntent, 0);
 
-        List<LabeledIntent> otherAppIntentList = new ArrayList<>();
-        //filter out all the other intents which we want to keep
-        for (int i = 0; i < resolveInfos.size(); i++) {
-            ResolveInfo appInfo = resolveInfos.get(i);
-            String packageName = appInfo.activityInfo.packageName;
-            Intent intentToAdd = new Intent();
-            //     if (packageName.contains("com.whatsapp")) {
-            //this is the intent we are interested in
-            intentToAdd.setComponent(new ComponentName(packageName, appInfo.activityInfo.name));
-            intentToAdd.setAction(Intent.ACTION_SEND);
-            intentToAdd.setType("text/plain");
-            intentToAdd.setPackage(packageName);
-            String channel = null;
-            try {
-                channel = pm.getApplicationLabel(pm.getApplicationInfo(packageName, 0)).toString();
-            } catch (PackageManager.NameNotFoundException e) {
-                // do nothing
-            }
-            String url = ShareInviteHelper.generateInviteUrl(MainActivity.this).setChannel(channel).generateLink();
-            String shareBody;
-            if (appInfo.activityInfo.name.startsWith("com.facebook.katana")) {
-                shareBody = url;
-            } else {
-                shareBody = "Please install this app: " + url;
-            }
+//         List<LabeledIntent> otherAppIntentList = new ArrayList<>();
+//         //filter out all the other intents which we want to keep
+//         for (int i = 0; i < resolveInfos.size(); i++) {
+//             ResolveInfo appInfo = resolveInfos.get(i);
+//             String packageName = appInfo.activityInfo.packageName;
+//             Intent intentToAdd = new Intent();
+//             //     if (packageName.contains("com.whatsapp")) {
+//             //this is the intent we are interested in
+//             intentToAdd.setComponent(new ComponentName(packageName, appInfo.activityInfo.name));
+//             intentToAdd.setAction(Intent.ACTION_SEND);
+//             intentToAdd.setType("text/plain");
+//             intentToAdd.setPackage(packageName);
+//             String channel = null;
+//             try {
+//                 channel = pm.getApplicationLabel(pm.getApplicationInfo(packageName, 0)).toString();
+//             } catch (PackageManager.NameNotFoundException e) {
+//                 // do nothing
+//             }
+//             String url = ShareInviteHelper.generateInviteUrl(MainActivity.this).setChannel(channel).generateLink();
+//             String shareBody;
+//             if (appInfo.activityInfo.name.startsWith("com.facebook.katana")) {
+//                 shareBody = url;
+//             } else {
+//                 shareBody = "Please install this app: " + url;
+//             }
 //
-            intentToAdd.putExtra(Intent.EXTRA_TEXT, shareBody);
-            intentToAdd.putExtra(Intent.EXTRA_SUBJECT, "Recommended app");
+//             intentToAdd.putExtra(Intent.EXTRA_TEXT, shareBody);
+//             intentToAdd.putExtra(Intent.EXTRA_SUBJECT, "Recommended app");
 
-            //add this intent to the list
-            otherAppIntentList.add(new LabeledIntent(intentToAdd, packageName,
-                    appInfo.loadLabel(pm), appInfo.icon));
-            //   }
-        }
+//             //add this intent to the list
+//             otherAppIntentList.add(new LabeledIntent(intentToAdd, packageName,
+//                     appInfo.loadLabel(pm), appInfo.icon));
+//             }
+//         }
 
-        // convert intentList to array
-        LabeledIntent[] extraIntents = otherAppIntentList.toArray(
-                new LabeledIntent[otherAppIntentList.size()]);
+//         // convert intentList to array
+//         LabeledIntent[] extraIntents = otherAppIntentList.toArray(
+//                 new LabeledIntent[otherAppIntentList.size()]);
 
-        //create and add all the intents to chooser
-        Intent chooserIntent = Intent.createChooser(smsIntent, "Share With");
+//         //create and add all the intents to chooser
+//         Intent chooserIntent = Intent.createChooser(smsIntent, "Share With");
 
-        //add all the extra intents that we have created
-        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents);
-        startActivityForResult(chooserIntent, 10);
-    }
-}
+//         //add all the extra intents that we have created
+//         chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents);
+//         startActivityForResult(chooserIntent, 10);
+//     }
+// }
