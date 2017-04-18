@@ -3,7 +3,7 @@
 # AppsFlyer examples.
 A set of single-page examples demonstrating the use of AppsFlyer SDK. 
 
-### Table of content
+#### The following examples are included:
 
 - **Invite and Cross Promotion** - Sample app includes invite through Facebook, WhatsApp and Mail; Cross Promotion tracking
   - [iOS](https://github.com/AppsFlyerSDK/SampleApp-Examples/tree/master/iOS/InAppTestInviteShare) 
