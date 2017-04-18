@@ -1,0 +1,12 @@
+build
+gen
+.gradle
+.idea
+.hgcheck
+local.properties
+*.orig
+*.rej
+out
+bin
+dist
+app/app.iml

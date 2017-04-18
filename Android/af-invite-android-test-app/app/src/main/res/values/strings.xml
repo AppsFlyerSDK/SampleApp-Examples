@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Invite-Promotion Sample App</string>
+    <string name="action_settings">Settings</string>
+    <string name="download_loginbox">Download LoginBox</string>
+    <string name="app_desc">This sample app by AppsFlyer demonstrates how to implement tracking of user acquisition through user invites and app cross promotion.</string>
+    <string name="cross_promotion">Cross-Promotion:</string>
+    <string name="invite_a_friend">Invite A Friend:</string>
+</resources>
