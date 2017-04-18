@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		946887A51EA66690000EAC6B /* AppsFlyerLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946887A41EA66690000EAC6B /* AppsFlyerLib.framework */; };
 		948F9ACE1E76FC5C0012C3B1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948F9ACD1E76FC5C0012C3B1 /* StoreKit.framework */; };
 		948F9AD01E76FC630012C3B1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948F9ACF1E76FC630012C3B1 /* MobileCoreServices.framework */; };
 		948F9AD21E76FC6A0012C3B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948F9AD11E76FC6A0012C3B1 /* SystemConfiguration.framework */; };
@@ -21,13 +22,10 @@
 		94B439D71E76F2F900403508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B439D51E76F2F900403508 /* Main.storyboard */; };
 		94B439D91E76F2F900403508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B439D81E76F2F900403508 /* Assets.xcassets */; };
 		94B439DC1E76F2F900403508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B439DA1E76F2F900403508 /* LaunchScreen.storyboard */; };
-		94BCC2081E77E9270058914E /* AppsFlyerLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BCC2071E77E9270058914E /* AppsFlyerLib.framework */; };
-		A271815ED77984E327EED2D9 /* Pods_InAppTestInviteShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AA894ACF5CF77E729EADD9 /* Pods_InAppTestInviteShare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E0BC9950733205DD36E332D /* Pods-InAppTestInviteShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InAppTestInviteShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-InAppTestInviteShare/Pods-InAppTestInviteShare.release.xcconfig"; sourceTree = "<group>"; };
-		93AA894ACF5CF77E729EADD9 /* Pods_InAppTestInviteShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InAppTestInviteShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		946887A41EA66690000EAC6B /* AppsFlyerLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppsFlyerLib.framework; sourceTree = "<group>"; };
 		948F9ACD1E76FC5C0012C3B1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		948F9ACF1E76FC630012C3B1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		948F9AD11E76FC6A0012C3B1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -48,8 +46,6 @@
 		94B439D81E76F2F900403508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94B439DB1E76F2F900403508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94B439DD1E76F2F900403508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94BCC2071E77E9270058914E /* AppsFlyerLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppsFlyerLib.framework; sourceTree = "<group>"; };
-		E8674E7A96AD77BDF2B2FC28 /* Pods-InAppTestInviteShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InAppTestInviteShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InAppTestInviteShare/Pods-InAppTestInviteShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,29 +60,19 @@
 				948F9AD21E76FC6A0012C3B1 /* SystemConfiguration.framework in Frameworks */,
 				948F9AD01E76FC630012C3B1 /* MobileCoreServices.framework in Frameworks */,
 				948F9ACE1E76FC5C0012C3B1 /* StoreKit.framework in Frameworks */,
-				94BCC2081E77E9270058914E /* AppsFlyerLib.framework in Frameworks */,
-				A271815ED77984E327EED2D9 /* Pods_InAppTestInviteShare.framework in Frameworks */,
+				946887A51EA66690000EAC6B /* AppsFlyerLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		015A9BBCC28402AB385CF22E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E8674E7A96AD77BDF2B2FC28 /* Pods-InAppTestInviteShare.debug.xcconfig */,
-				5E0BC9950733205DD36E332D /* Pods-InAppTestInviteShare.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		94B439C01E76F2F900403508 = {
 			isa = PBXGroup;
 			children = (
+				946887A41EA66690000EAC6B /* AppsFlyerLib.framework */,
 				94B439CB1E76F2F900403508 /* InAppTestInviteShare */,
 				94B439CA1E76F2F900403508 /* Products */,
-				015A9BBCC28402AB385CF22E /* Pods */,
 				BAECE575185BBA4EEDD750C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -102,7 +88,6 @@
 		94B439CB1E76F2F900403508 /* InAppTestInviteShare */ = {
 			isa = PBXGroup;
 			children = (
-				94BCC2071E77E9270058914E /* AppsFlyerLib.framework */,
 				948F9ADD1E76FCFE0012C3B1 /* NSString_URLEncoding.h */,
 				948F9ADE1E76FCFE0012C3B1 /* NSString_URLEncoding.m */,
 				94B439CF1E76F2F900403508 /* AppDelegate.h */,
@@ -137,7 +122,6 @@
 				948F9AD11E76FC6A0012C3B1 /* SystemConfiguration.framework */,
 				948F9ACF1E76FC630012C3B1 /* MobileCoreServices.framework */,
 				948F9ACD1E76FC5C0012C3B1 /* StoreKit.framework */,
-				93AA894ACF5CF77E729EADD9 /* Pods_InAppTestInviteShare.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,12 +133,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94B439E01E76F2F900403508 /* Build configuration list for PBXNativeTarget "InAppTestInviteShare" */;
 			buildPhases = (
-				43364A66BCB16424C50D0AC2 /* [CP] Check Pods Manifest.lock */,
 				94B439C51E76F2F900403508 /* Sources */,
 				94B439C61E76F2F900403508 /* Frameworks */,
 				94B439C71E76F2F900403508 /* Resources */,
-				BD60E9FD8CD7DBFCFF7CE32C /* [CP] Embed Pods Frameworks */,
-				E7185097FD2FA75F202E1351 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,54 +192,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		43364A66BCB16424C50D0AC2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BD60E9FD8CD7DBFCFF7CE32C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InAppTestInviteShare/Pods-InAppTestInviteShare-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7185097FD2FA75F202E1351 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InAppTestInviteShare/Pods-InAppTestInviteShare-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94B439C51E76F2F900403508 /* Sources */ = {
@@ -386,7 +319,6 @@
 		};
 		94B439E11E76F2F900403508 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8674E7A96AD77BDF2B2FC28 /* Pods-InAppTestInviteShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_MODULES_AUTOLINK = YES;
@@ -405,7 +337,6 @@
 		};
 		94B439E21E76F2F900403508 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E0BC9950733205DD36E332D /* Pods-InAppTestInviteShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_MODULES_AUTOLINK = YES;
