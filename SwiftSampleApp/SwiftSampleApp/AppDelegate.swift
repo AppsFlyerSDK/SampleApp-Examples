@@ -1,4 +1,7 @@
-
+/*********************************************************************
+ In order for us to provide optimal support,
+ we would kindly ask you to submit any issues to support@appsflyer.com
+ *********************************************************************/
 
 import UIKit
 import AppsFlyerLib
@@ -11,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate , AppsFlyerTrackerDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        AppsFlyerTracker.shared().appsFlyerDevKey = "K2aMGPY3SkC9WckYUgHJ99"
-        AppsFlyerTracker.shared().appleAppID = "123488888"
+        AppsFlyerTracker.shared().appsFlyerDevKey = "<DEV_KEY>"
+        AppsFlyerTracker.shared().appleAppID = "<APP_ID>"
         
         AppsFlyerTracker.shared().delegate = self
         
