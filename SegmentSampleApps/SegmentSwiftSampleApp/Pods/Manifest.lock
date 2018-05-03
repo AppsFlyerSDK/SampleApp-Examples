@@ -1,0 +1,26 @@
+PODS:
+  - Analytics (3.6.9)
+  - AppsFlyerFramework (4.8.3)
+  - segment-appsflyer-ios/StaticLibWorkaround (1.2.5):
+    - Analytics (~> 3.5)
+    - AppsFlyerFramework (~> 4)
+    - AppsFlyerTvOsLib (~> 4)
+
+DEPENDENCIES:
+  - AppsFlyerFramework
+  - segment-appsflyer-ios/StaticLibWorkaround
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Analytics
+    - AppsFlyerFramework
+    - segment-appsflyer-ios
+
+SPEC CHECKSUMS:
+  Analytics: 6541ce337e99d9f7a2240a8b3953940a7be5f998
+  AppsFlyerFramework: 243435778bedb337fbaf45cb29715b9796d94bdb
+  segment-appsflyer-ios: a0698fea8be17a10193a3d54faf4246fa84c40ce
+
+PODFILE CHECKSUM: 136d32e2bb0b4cdae7269ee4c2a6bbf0aaa47f4b
+
+COCOAPODS: 1.5.0
