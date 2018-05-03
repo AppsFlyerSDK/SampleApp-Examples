@@ -38,7 +38,7 @@ var app = {
 
 
    var options = {
-               devKey:  'K2aMGPY3SkC9WckYUgHJ99',
+               devKey:  '<AF_DEV_KEY>',
                isDebug: true,
                onInstallConversionDataListener: true               
            };
