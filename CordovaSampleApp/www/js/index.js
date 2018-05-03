@@ -21,9 +21,12 @@ var app = {
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
 
-        document.addEventListener("deviceready", function(){
-   
-        function onSuccess(result) {
+    },
+
+    onDeviceReady: function() {
+        this.receivedEvent('deviceready');
+
+          function onSuccess(result) {
             /* Conversion data success callback */
              alert(result);
         }
@@ -36,7 +39,6 @@ var app = {
 
    var options = {
                devKey:  'K2aMGPY3SkC9WckYUgHJ99',
-               appId: '123488888',
                isDebug: true,
                onInstallConversionDataListener: true               
            };
@@ -44,21 +46,10 @@ var app = {
     var userAgent = window.navigator.userAgent.toLowerCase();
                           
     if (/iphone|ipad|ipod/.test( userAgent )) {
-        options.appId = "123488888";            // your ios app id in app store        
+        options.appId = "4166357985";            // your ios app id in app store        
     }
     window.plugins.appsFlyer.initSdk(options , onSuccess , onError);
     window.plugins.appsFlyer.handleOpenUrl(url);
-}, false);
-
-
-    },
-
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        this.receivedEvent('deviceready');
     },
 
     // Update DOM on a Received Event

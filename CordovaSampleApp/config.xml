@@ -25,4 +25,5 @@
     </platform>
     <plugin name="cordova-plugin-appsflyer-sdk" spec="^4.4.0" />
     <engine name="ios" spec="^4.5.4" />
+    <engine name="android" spec="^7.0.0" />
 </widget>

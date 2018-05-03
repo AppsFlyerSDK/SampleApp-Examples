@@ -8,6 +8,6 @@ A full integration of the AppsFlyer SDK on iOS with Swift
 - **Track Organic and Non-Organic Installs** - Sample app includes a basic SDK integration that allows the AppsFlyer SDK to track installs, sessions and user activity
 - **In App Events** - Send rich in-app events.
 - **Conversion Data** - Get install data and implement deffered deeplinking.
-- **Deep Linking** - Deep link into application and create logic using onAppOpenAttribution
+- **Deep Linking** - Get Deep link into application and create logic using onAppOpenAttribution
 - **Uninstall Tracking** 
 - **Push Notification Tracking** 

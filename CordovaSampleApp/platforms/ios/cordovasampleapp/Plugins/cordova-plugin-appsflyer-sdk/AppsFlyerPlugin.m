@@ -27,6 +27,9 @@ static NSString *const SUCCESS         = @"Success";
     
     if (![initSdkOptions isKindOfClass:[NSNull class]]) {
         
+        
+        
+        
         id value = nil;
         id isConversionDataValue = nil;
         devKey = (NSString*)[initSdkOptions objectForKey: afDevKey];
