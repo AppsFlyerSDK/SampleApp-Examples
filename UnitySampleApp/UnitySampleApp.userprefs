@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{4E6D1E32-2EA7-B475-944A-450F57DDD36A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/Android/AndroidManifest.xml">
+    <Files>
+      <File FileName="Assets/AFObject.cs" Line="38" Column="51" />
+      <File FileName="Assets/Plugins/AppsFlyerTrackerCallbacks.cs" Line="25" Column="48" />
+      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="49" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.UnitySampleApp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
