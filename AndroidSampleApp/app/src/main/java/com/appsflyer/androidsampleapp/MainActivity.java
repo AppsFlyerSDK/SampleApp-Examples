@@ -31,22 +31,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 /* Track Events in real time */
-//                Map<String, Object> eventValue = new HashMap<String, Object>();
-//                eventValue.put(AFInAppEventParameterName.REVENUE, 2.99);
-//                eventValue.put(AFInAppEventParameterName.CONTENT_TYPE, "category_a");
-//                eventValue.put(AFInAppEventParameterName.CONTENT_ID, "1234567");
-//                eventValue.put(AFInAppEventParameterName.CURRENCY, "USD");
-//                AppsFlyerLib.getInstance().trackEvent(getApplicationContext(), AFInAppEventType.PURCHASE, eventValue);
-
-
-                Map<String, Object> dict = new HashMap<String, Object>();
-                Double price = 4.99;
-                dict.put(AFInAppEventParameterName.REVENUE, price); //skuDetails.getPrice());
-                dict.put(AFInAppEventParameterName.CONTENT_ID, 898);
-                dict.put(AFInAppEventParameterName.CURRENCY, "EUR");
-                dict.put(AFInAppEventParameterName.QUANTITY,"1");
-
-                AppsFlyerLib.getInstance().trackEvent(getBaseContext(),AFInAppEventType.PURCHASE,dict);
+                Map<String, Object> eventValue = new HashMap<String, Object>();
+                eventValue.put(AFInAppEventParameterName.REVENUE, 2.99);
+                eventValue.put(AFInAppEventParameterName.CONTENT_TYPE, "category_a");
+                eventValue.put(AFInAppEventParameterName.CONTENT_ID, "1234567");
+                eventValue.put(AFInAppEventParameterName.CURRENCY, "USD");
+                AppsFlyerLib.getInstance().trackEvent(getApplicationContext(), AFInAppEventType.PURCHASE, eventValue);
 
             }
         });

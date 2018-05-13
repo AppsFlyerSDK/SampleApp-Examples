@@ -61,7 +61,7 @@ public class AFApplication extends Application {
         AppsFlyerLib.getInstance().init(AF_DEV_KEY , conversionListener , getApplicationContext());
         AppsFlyerLib.getInstance().startTracking(this, AF_DEV_KEY);
 
-        AppsFlyerLib.getInstance().enableUninstallTracking(senderId);
+
 
 
     }

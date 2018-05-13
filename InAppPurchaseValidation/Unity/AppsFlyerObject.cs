@@ -114,7 +114,7 @@ public class AppsFlyerObject : MonoBehaviour, IStoreListener
         {
             Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
 
-            afValidate(prodID, regPrice, currency, transactionID, myDict);
+            afiosValidate(prodID, regPrice, currency, transactionID, myDict);
         }
         else
         {
@@ -125,7 +125,9 @@ public class AppsFlyerObject : MonoBehaviour, IStoreListener
         return PurchaseProcessingResult.Complete;
     }
 
-    void afValidate(string prodID, string price, string currency, string transactionID, Dictionary<string, string> extraParams)
+
+    /* Note this is for iOS only. Recipt validation on Android has a different API */
+    void afiosValidate(string prodID, string price, string currency, string transactionID, Dictionary<string, string> extraParams)
     {
         Debug.Log("AFVALIDATE called! \n ProductID is: " + prodID + "\n TransactionID is: " + transactionID + "\n Price is: " + price + "\n Currency is: " + currency);
 

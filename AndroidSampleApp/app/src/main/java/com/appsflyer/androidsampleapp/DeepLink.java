@@ -31,41 +31,6 @@ public class DeepLink extends AppCompatActivity {
         AppsFlyerLib.getInstance().sendDeepLinkData(this);
 
 
-        AppsFlyerLib.getInstance().registerConversionListener(this, new AppsFlyerConversionListener() {
-
-            /* Returns the attribution data. Note - the same conversion data is returned every time per install */
-            @Override
-            public void onInstallConversionDataLoaded(Map<String, String> conversionData) {
-                for (String attrName : conversionData.keySet()) {
-                    Log.d(AppsFlyerLib.LOG_TAG, "attribute: " + attrName + " = " + conversionData.get(attrName));
-                }
-            }
-
-            @Override
-            public void onInstallConversionFailure(String errorMessage) {
-                Log.d(AppsFlyerLib.LOG_TAG, "error onInstallConversionFailure : " + errorMessage);
-            }
-
-
-            /* Called only when a Deep Link is opened */
-            @Override
-            public void onAppOpenAttribution(Map<String, String> conversionData) {
-                String attributionDataText = "Attribution Data: \n";
-                for (String attrName : conversionData.keySet()) {
-                    Log.d(AppsFlyerLib.LOG_TAG, "attribute: " + attrName + " = " +
-                            conversionData.get(attrName));
-                    attributionDataText += conversionData.get(attrName) + "\n";
-
-                }
-                setAttributionText(attributionDataText);
-            }
-
-            @Override
-            public void onAttributionFailure(String errorMessage) {
-                Log.d(AppsFlyerLib.LOG_TAG, "error onAttributionFailure : " + errorMessage);
-            }
-        });
-
     }
 
 
