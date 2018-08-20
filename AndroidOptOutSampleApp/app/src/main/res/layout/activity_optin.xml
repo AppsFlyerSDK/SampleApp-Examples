@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/optinTxt"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tracking is:"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_above="@id/togg_btn"/>
+    <ToggleButton
+            android:id="@+id/togg_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="30sp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/btText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click on button to toggle tracking"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_below="@id/togg_btn"/>
+
+</RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

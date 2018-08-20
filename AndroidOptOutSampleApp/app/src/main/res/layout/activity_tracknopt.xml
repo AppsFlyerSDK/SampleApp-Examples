@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/optOutTitle"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:text="@string/tReq"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"/>
+
+        <TextView
+            android:id="@+id/tReq"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textView"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="@string/optout"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/tReq"/>
+
+
+        <TextView
+            android:id="@+id/optedOut"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textView2" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Opt-Out Samples</string>
+    <string name="af_logo">AppsFlyer</string>
+    <string name="opt_in_async">Opt-In</string>
+    <string name="track_and_opt_out">Track and Opt-Out</string>
+    <string name="track_and_anonimize">Track and Anonymize</string>
+    <string name="main_text">Please select a test scenario.\n In order to test all three scenarios - click the "Reset Tests" button and re-launch the application after each test is completed</string>
+    <string name="sub_text">Clicking the "Reset Tests" will delete the device cache for this application</string>
+    <string name="tReq">Initial Tracking Request: </string>
+    <string name="optout">Opt Out: </string>
+    <string name="optinTxt">Opt-In Example\nUse case: User is prompted for Terms Of Condition / a CDN reply is expected in order to determine if the user should be tracked\nThis example uses a toggle button to allow/disallow tracking</string>
+    <string name="anonTitle">Track And Anonymize Example\nTrack an install and anonymize all subsequent data</string>
+    <string name="optOutTitle">Track And Opt-Out Example\nTrack an install and opt-out all subsequent data</string>
+</resources>

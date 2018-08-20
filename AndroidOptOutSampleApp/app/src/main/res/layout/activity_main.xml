@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/selection_form"
+        android:layout_width="match_parent"
+        android:layout_weight="1.14"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/sub_selection_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:text="@string/main_text"/>
+
+            <Button
+                android:id="@+id/opt_in_async"
+                style="?android:textAppearanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onClick"
+                android:text="@string/opt_in_async" />
+
+            <Button
+                android:id="@+id/track_and_opt_out"
+                style="?android:textAppearanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onClick"
+                android:text="@string/track_and_opt_out" />
+
+            <Button
+                android:id="@+id/track_and_annonimize"
+                style="?android:textAppearanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onClick"
+                android:text="@string/track_and_anonimize" />
+
+
+
+            <Button
+                android:id="@+id/reset_test_state"
+                style="?android:textAppearanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onClick"
+                android:text="Reset test state" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:text="@string/sub_text"/>
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/af_logo"
+                android:src="@drawable/logo" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
