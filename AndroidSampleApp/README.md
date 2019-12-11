@@ -1,17 +1,30 @@
-
-
 <img src="https://www.appsflyer.com/wp-content/uploads/2016/11/logo-1.svg"  width="200">
 
-# AppsFlyer Android Sample App
-#####A simple integration of the Appsflyer SDK.
 
-For more information about the Android AppsFlyer SDK integration click here:
-https://support.appsflyer.com/hc/en-us/articles/207032126-AppsFlyer-SDK-Integration-Android
+# AndroidSampleApp
 
-#### The following examples are included:
+This app was created for a sample AppsFlyer SDK integration. 
 
-- **Organic & Non-Organic install tracking** 
+For more information, check out: https://support.appsflyer.com/hc/en-us/articles/208386173
 
-- **Deep Linking**
+Please submit any questions or comments to support@appsflyer.com
 
-- **Get Conversion Data**
+<hr>
+
+## How to Integrate the AppsFlyer SDK
+
+### 1) Add the SDK to your Project in ../app/build.gradle
+
+<img src="/ScreenShots/GradleScreenShot.png/">
+
+### 2) Set the Required Permissions and BroadcastReceiver in AndroidManifest.xml
+
+<img src="/ScreenShots/AndroidManifestScreenShot.png/">
+
+### 3) SDK Initialization
+
+<img src="/ScreenShots/AFApplicationScreenShot.png/">
+
+### 4) Tracking In-App Events
+<img src="/ScreenShots/EventScreenShot.png/">
+
